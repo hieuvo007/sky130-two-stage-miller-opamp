@@ -161,14 +161,11 @@ C {code.sym} -490 40 0 0 {name=s1 only_toplevel=false value=".lib /usr/local/sha
 .control
 ac dec 20 1 1G
 
-* Tạo biến cho Biên độ và Pha để file xuất ra gọn gàng
 let gain_db = vdb(out)
 let phase_deg = cph(v(out))*180/pi
 
-* Vẽ đồ thị trên Ngspice (nếu vẫn muốn xem nhanh)
 plot gain_db phase_deg
 
-* Xuất dữ liệu ra file text
 wrdata ac_results.txt gain_db phase_deg
 .endc"}
 C {lab_pin.sym} -300 -130 0 0 {name=p3 sig_type=std_logic lab=VDD}
